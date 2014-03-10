@@ -16,6 +16,18 @@ function predump( $var )
 
 
 /**
+ * void quickdump( mixed $var )
+ * Alias of predump(), included since that's what we're used to calling it.
+ *
+ * @deprecated  0.1.0
+ * ------------------------------------------------------------------------------------------ */
+function quickdump( $var )
+{
+  predump( $var );
+}
+
+
+/**
  * mixed get_version_hash( string $filepath [, int $length = 7 [, string $alg = 'sha1']] )
  * Generates a unique hash using hash_file() that can be used for file versioning/caching.
  *
