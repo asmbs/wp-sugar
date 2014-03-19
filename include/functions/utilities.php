@@ -49,3 +49,27 @@ function get_version_hash( $filepath, $length = 7, $alg = 'sha1' )
 
   return $hash;
 }
+
+
+/**
+ * string minify( string $html )
+ * Strips extraneous whitespace from a chunk of HTML.
+ *
+ * @param   string  $html  The HTML to minify.
+ *
+ * @return  string         The minified HTML.
+ * ------------------------------------------------------------------------------------------ */
+function minify( $html )
+{
+  // Remove whitespace between tags
+  $html = preg_replace( '/(?<=\>)[\r\n\t]+(?=\<)/', '', $html );
+
+  // Restrict whitespace between the beginning/end of a tag and text
+  $html = preg_replace( '/(?<=\>)[\r\n\t\s]+(?=[^\<])/', ' ', $html );
+  $html = preg_replace( '/(?<=[^\>])[\r\n\t\s]+(?=\<)/', ' ', $html );
+
+  // Remove linebreaks in blocks of text
+  $html = preg_replace( '/(?<=[^\-\<\>])[\r\n\t\s]+(?=[^\-\<\>])/', ' ', $html );
+  
+  return $html;
+}
