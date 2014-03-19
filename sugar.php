@@ -6,7 +6,7 @@
  * Author URI:  https://github.com/asmbs
  * License:     MIT License
  * License URI: http://opensource.org/licenses/MIT
- * Version:     0.1.0
+ * Version:     0.2.0
  */
 
 // Don't forget, plugin_dir_path adds a trailing slash.
@@ -15,5 +15,6 @@ define( 'SUGAR_PATH', plugin_dir_path( __FILE__ ) );
 // Include stuff
 include_once SUGAR_PATH .'include/functions/template.php';
 include_once SUGAR_PATH .'include/functions/utilities.php';
+include_once SUGAR_PATH .'include/functions/widgets.php';
 
 // Wait...that's it?!
