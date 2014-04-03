@@ -13,6 +13,7 @@
 define( 'SUGAR_PATH', plugin_dir_path( __FILE__ ) );
 
 // Include stuff
+include_once SUGAR_PATH .'include/functions/shortcode.php';
 include_once SUGAR_PATH .'include/functions/template.php';
 include_once SUGAR_PATH .'include/functions/utilities.php';
 include_once SUGAR_PATH .'include/functions/widgets.php';
