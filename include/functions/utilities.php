@@ -28,7 +28,7 @@ function quickdump( $var )
 
 
 /**
- * void quick_register_post_type( string $singular, string $plural [, array $args = []] )
+ * void quick_register_post_type( string $post_type, string $singular, string $plural [, array $args )
  * Registers a post type using auto-generated labels and a default set of arguments. Use this
  * in place of `register_post_type` (call it inside the `init` action).
  *
@@ -89,7 +89,7 @@ function quick_register_post_type( $post_type, $singular, $plural, $args = [] )
   $merged_args = array_replace_recursive( $default_args, $args );
 
   // Register the post type
-  return register_post_type( $post_type, $merged_args );
+  register_post_type( $post_type, $merged_args );
 }
 
 
