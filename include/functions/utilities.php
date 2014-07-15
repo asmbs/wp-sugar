@@ -81,7 +81,7 @@ function quick_register_post_type( $post_type, $singular, $plural, $args = [] )
       'hierarchical'        => false,
       'has_archive'         => true,
       'rewrite'             => [ 'slug' => $slug, 'with_front' => true ],
-      'supports'            => [ 'title', 'editor', 'author', 'revisions' ],
+      'supports'            => [],
       'can_export'          => true
   ];
 
