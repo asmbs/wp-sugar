@@ -6,7 +6,7 @@
  * Author URI:  https://github.com/asmbs
  * License:     MIT License
  * License URI: http://opensource.org/licenses/MIT
- * Version:     0.4.1
+ * Version:     0.4.2
  */
 
 // Don't forget, plugin_dir_path adds a trailing slash.
