@@ -18,8 +18,7 @@ function get_permalink_by_slug( $slug, $post_type = 'post' )
 
   global $wpdb;
   $sql = $wpdb->prepare(
-    'SELECT `ID` FROM `%1$s` WHERE `post_type`="%2$s" AND `post_name`="%3$s" AND `post_status`="publish";',
-    $wpdb->posts,
+    "SELECT `ID` FROM {$wpdb->posts} WHERE `post_type`='%s' AND `post_name`='%s' AND `post_status`='publish';",
     $post_type,
     $slug
   );
